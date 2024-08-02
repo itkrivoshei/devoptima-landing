@@ -7,7 +7,7 @@ const FeaturesSection: React.FC = () => {
         <div className='relative'>
           <img
             alt='dashboard'
-            src='/images/dashboard-metrics.svg'
+            src={`${process.env.PUBLIC_URL}/images/dashboard-metrics.svg`}
             className='relative z-20'
             style={{ maxWidth: '100%', height: 'auto' }}
           />
@@ -25,7 +25,7 @@ const FeaturesSection: React.FC = () => {
             <div className='flex flex-col items-start text-left'>
               <img
                 alt='DevOps transformation'
-                src='/images/icon-devops-transformation.svg'
+                src={`${process.env.PUBLIC_URL}/images/icon-devops-transformation.svg`}
                 style={{ marginBottom: '-1.2rem', marginLeft: '-2rem' }}
               />
               <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
@@ -38,7 +38,7 @@ const FeaturesSection: React.FC = () => {
             <div className='flex flex-col items-start text-left'>
               <img
                 alt='Efficient operations'
-                src='/images/icon-efficient-operations.svg'
+                src={`${process.env.PUBLIC_URL}/images/icon-efficient-operations.svg`}
                 style={{ marginBottom: '-1.2rem', marginLeft: '-2rem' }}
               />
               <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
@@ -51,7 +51,7 @@ const FeaturesSection: React.FC = () => {
             <div className='flex flex-col items-start text-left'>
               <img
                 alt='CI/CD implementation'
-                src='/images/icon-cicd-implementation.svg'
+                src={`${process.env.PUBLIC_URL}/images/icon-cicd-implementation.svg`}
                 style={{ marginBottom: '-1.2rem', marginLeft: '-2rem' }}
               />
               <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
@@ -64,7 +64,7 @@ const FeaturesSection: React.FC = () => {
             <div className='flex flex-col items-start text-left'>
               <img
                 alt='Automation mastery'
-                src='/images/icon-automation-mastery.svg'
+                src={`${process.env.PUBLIC_URL}/images/icon-automation-mastery.svg`}
                 style={{
                   marginBottom: '-1.2rem',
                   marginLeft: '-2rem',
