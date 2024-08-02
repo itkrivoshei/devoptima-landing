@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         <div className='flex flex-col items-start mb-8 md:mb-0'>
           <a href='/' className='hover:opacity-75'>
             <img
-              src='/images/logoDevOptima.svg'
+              src={`${process.env.PUBLIC_URL}/images/logoDevOptima.svg`}
               alt='DevOptima Logo'
               className='h-10 w-36 mb-4'
               style={{ width: '144px', height: '40px' }}
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             <ul className='text-[#BDC4D1] text-sm space-y-1'>
               <li className='flex items-center'>
                 <img
-                  src='/images/twitter-logo.svg'
+                  src={`${process.env.PUBLIC_URL}/images/twitter-logo.svg`}
                   alt='Twitter'
                   className='h-4 w-4 mr-2 hover:text-[#EFF1F6]'
                 />
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               </li>
               <li className='flex items-center'>
                 <img
-                  src='/images/linkedin-logo.svg'
+                  src={`${process.env.PUBLIC_URL}/images/linkedin-logo.svg`}
                   alt='LinkedIn'
                   className='h-4 w-4 mr-2 hover:text-[#EFF1F6]'
                 />
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
               </li>
               <li className='flex items-center'>
                 <img
-                  src='/images/github-logo.svg'
+                  src={`${process.env.PUBLIC_URL}/images/github-logo.svg`}
                   alt='GitHub'
                   className='h-4 w-4 mr-2 hover:text-[#EFF1F6]'
                 />
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
               </li>
               <li className='flex items-center'>
                 <img
-                  src='/images/discourse-logo.svg'
+                  src={`${process.env.PUBLIC_URL}/images/discourse-logo.svg`}
                   alt='Discourse'
                   className='h-4 w-4 mr-2 hover:text-[#EFF1F6]'
                 />
