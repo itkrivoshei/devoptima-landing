@@ -37,7 +37,7 @@ const MainSection: React.FC = () => {
         <div className='relative hover:opacity-90 transition-opacity duration-200'>
           <img
             alt='hero'
-            src='/images/code-image.svg'
+            src={`${process.env.PUBLIC_URL}/images/code-image.svg`}
             className='relative z-20'
             style={{ maxWidth: '100%', height: 'auto' }}
           />
