@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         >
           <img
             alt='DevOptima logo'
-            src='/images/logoDevOptima.svg'
+            src={`${process.env.PUBLIC_URL}/images/logoDevOptima.svg`}
             className='h-12'
           />
         </a>
