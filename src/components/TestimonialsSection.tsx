@@ -8,7 +8,7 @@ const TestimonialsSection: React.FC = () => {
           <div className='bg-gradient-to-b from-transparent to-[#1A1A2E] p-8 rounded-lg text-left'>
             <img
               alt='Client feedback'
-              src='/images/icon-client-feedback1.svg'
+              src={`${process.env.PUBLIC_URL}/images/icon-client-feedback1.svg`}
               style={{ marginBottom: '-2rem', marginLeft: '-3rem' }}
             />
             <p className='text-gray-200 text-lg leading-relaxed font-light tracking-tight pt-0 pb-9'>
@@ -20,7 +20,7 @@ const TestimonialsSection: React.FC = () => {
             <div className='flex items-center'>
               <img
                 alt='John Smith'
-                src='/images/john-smith.png'
+                src={`${process.env.PUBLIC_URL}/images/john-smith.png`}
                 className='w-12 h-12 rounded-full grayscale object-cover'
               />
               <div className='ml-4 text-left'>
@@ -32,7 +32,7 @@ const TestimonialsSection: React.FC = () => {
           <div className='bg-gradient-to-b from-transparent to-[#1A1A2E] p-8 rounded-lg text-left'>
             <img
               alt='Client feedback'
-              src='/images/icon-client-feedback2.svg'
+              src={`${process.env.PUBLIC_URL}/images/icon-client-feedback2.svg`}
               style={{ marginBottom: '-2rem', marginLeft: '-3rem' }}
             />
             <p className='text-gray-200 text-lg leading-relaxed font-light tracking-tight pt-0 pb-9'>
@@ -44,7 +44,7 @@ const TestimonialsSection: React.FC = () => {
             <div className='flex items-center'>
               <img
                 alt='Jane Doe'
-                src='/images/jane-doe.png'
+                src={`${process.env.PUBLIC_URL}/images/jane-doe.png`}
                 className='w-12 h-12 rounded-full grayscale object-cover'
               />
               <div className='ml-4 text-left'>
