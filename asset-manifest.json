@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/devoptima-landing/static/css/main.b8f062b8.css",
+    "main.js": "/devoptima-landing/static/js/main.c8b1ae3e.js",
+    "index.html": "/devoptima-landing/index.html",
+    "main.b8f062b8.css.map": "/devoptima-landing/static/css/main.b8f062b8.css.map",
+    "main.c8b1ae3e.js.map": "/devoptima-landing/static/js/main.c8b1ae3e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8f062b8.css",
+    "static/js/main.c8b1ae3e.js"
+  ]
+}
