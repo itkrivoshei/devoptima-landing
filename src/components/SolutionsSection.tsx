@@ -24,7 +24,7 @@ const SolutionsSection: React.FC = () => {
           >
             <img
               alt='Continuous Integration & Deployment'
-              src='/images/icon-ci-cd.svg'
+              src={`${process.env.PUBLIC_URL}/images/icon-ci-cd.svg`}
               className='mx-auto mb-4'
             />
             <h3 className='text-white text-lg font-semibold'>
@@ -45,7 +45,7 @@ const SolutionsSection: React.FC = () => {
           >
             <img
               alt='Cloud Solutions & Infrastructure Management'
-              src='/images/icon-cloud-solutions.svg'
+              src={`${process.env.PUBLIC_URL}/images/icon-cloud-solutions.svg`}
               className='mx-auto mb-4'
             />
             <h3 className='text-white text-lg font-semibold'>
@@ -67,7 +67,7 @@ const SolutionsSection: React.FC = () => {
           >
             <img
               alt='Automated Testing & Quality Assurance'
-              src='/images/icon-automated-testing.svg'
+              src={`${process.env.PUBLIC_URL}/images/icon-automated-testing.svg`}
               className='mx-auto mb-4'
             />
             <h3 className='text-white text-lg font-semibold'>
