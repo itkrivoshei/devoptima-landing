@@ -1,22 +1,24 @@
 import './index.css';
-import React from 'react';
+
+import CallToActionSection from './components/CallToActionSection';
+import FeaturesSection from './components/FeaturesSection';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import FeaturesSection from './components/FeaturesSection';
-import TestimonialsSection from './components/TestimonialsSection';
 import SolutionsSection from './components/SolutionsSection';
-import CallToActionSection from './components/CallToActionSection';
-import Footer from './components/Footer';
+import TestimonialsSection from './components/TestimonialsSection';
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <div>
+    <div className='min-h-screen overflow-hidden text-slate-50'>
       <Header />
-      <HeroSection />
-      <FeaturesSection />
-      <SolutionsSection />
-      <TestimonialsSection />
-      <CallToActionSection />
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <SolutionsSection />
+        <TestimonialsSection />
+        <CallToActionSection />
+      </main>
       <Footer />
     </div>
   );
