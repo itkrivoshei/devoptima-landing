@@ -1,83 +1,48 @@
-import React from 'react';
+const solutions = [
+  {
+    title: 'CI/CD',
+    text: 'Automated checks and deployment steps for predictable releases.',
+    image: 'icon-ci-cd.svg',
+  },
+  {
+    title: 'Cloud infrastructure',
+    text: 'Scalable environments with cleaner infrastructure operations.',
+    image: 'icon-cloud-solutions.svg',
+  },
+  {
+    title: 'DevOps transformation',
+    text: 'Workflow improvements across development and operations teams.',
+    image: 'icon-devops-transformation.svg',
+  },
+];
 
-const SolutionsSection: React.FC = () => {
+const SolutionsSection = () => {
   return (
-    <section className='pt-20 py-20'>
-      <div className='container mx-auto text-center max-w-section'>
-        <div className='mx-auto max-w-text-block'>
-          <h2 className='font-title text-4xl leading-tight pb-7 text-white'>
-            Innovative solutions for operational excellence
+    <section id="solutions" className="py-20">
+      <div className="container">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#9DBBFF]">Solutions</p>
+          <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
+            Simple structure, clear value, no unnecessary noise.
           </h2>
-          <p className='text-gray-400 text-lg leading-relaxed font-light tracking-tight pt-0 pb-9'>
-            Tailored DevOps expertise driving your business momentum.
-            Personalized solutions for growth and evolution.
+          <p className="mt-5 text-lg leading-8 text-text-secondary">
+            Each section is kept focused so the page stays easy to scan on desktop and mobile.
           </p>
         </div>
-        <div className='grid grid-cols-3 gap-10'>
-          <div
-            className='p-8 rounded-lg max-w-card mx-auto'
-            style={{
-              background:
-                'linear-gradient(180deg, rgba(33, 66, 136, 0.25) 0%, rgba(8, 20, 43, 0.25) 100%)',
-              border: '1px solid rgba(116, 159, 246, 0.3)',
-            }}
-          >
-            <img
-              alt='Continuous Integration & Deployment'
-              src={`${process.env.PUBLIC_URL}/images/icon-ci-cd.svg`}
-              className='mx-auto mb-4'
-            />
-            <h3 className='text-white text-lg font-semibold'>
-              Continuous Integration & Deployment
-            </h3>
-            <p className='text-gray-400 text-sm'>
-              Streamline your development process with our advanced CI/CD
-              solutions, ensuring faster and more reliable code deployment.
-            </p>
-          </div>
-          <div
-            className='p-8 rounded-lg max-w-card mx-auto'
-            style={{
-              background:
-                'linear-gradient(180deg, rgba(33, 66, 136, 0.25) 0%, rgba(8, 20, 43, 0.25) 100%)',
-              border: '1px solid rgba(116, 159, 246, 0.3)',
-            }}
-          >
-            <img
-              alt='Cloud Solutions & Infrastructure Management'
-              src={`${process.env.PUBLIC_URL}/images/icon-cloud-solutions.svg`}
-              className='mx-auto mb-4'
-            />
-            <h3 className='text-white text-lg font-semibold'>
-              Cloud Solutions & Infrastructure Management
-            </h3>
-            <p className='text-gray-400 text-sm'>
-              Leverage the cloud for scalability and efficiency. We provide
-              comprehensive cloud infrastructure management and optimization
-              services.
-            </p>
-          </div>
-          <div
-            className='p-8 rounded-lg max-w-card mx-auto'
-            style={{
-              background:
-                'linear-gradient(180deg, rgba(33, 66, 136, 0.25) 0%, rgba(8, 20, 43, 0.25) 100%)',
-              border: '1px solid rgba(116, 159, 246, 0.3)',
-            }}
-          >
-            <img
-              alt='Automated Testing & Quality Assurance'
-              src={`${process.env.PUBLIC_URL}/images/icon-automated-testing.svg`}
-              className='mx-auto mb-4'
-            />
-            <h3 className='text-white text-lg font-semibold'>
-              Automated Testing & Quality Assurance
-            </h3>
-            <p className='text-gray-400 text-sm'>
-              Enhance product quality with our automated testing services,
-              designed to detect issues early and reduce time-to-market.
-            </p>
-          </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {solutions.map((solution) => (
+            <article key={solution.title} className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-7 transition hover:-translate-y-1 hover:border-[#3F57DA]/50">
+              <img
+                alt=""
+                aria-hidden="true"
+                src={`${import.meta.env.BASE_URL}images/${solution.image}`}
+                className="mb-6 h-12 w-12"
+              />
+              <h3 className="text-xl font-semibold text-white">{solution.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-text-secondary">{solution.text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
