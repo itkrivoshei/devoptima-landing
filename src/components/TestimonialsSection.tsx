@@ -1,57 +1,43 @@
-import React from 'react';
+const workflowSteps = [
+  {
+    title: '01 · Plan',
+    description: 'Define the deployment target, static assets, routing, and release path.',
+  },
+  {
+    title: '02 · Build',
+    description: 'Use typed React components, Tailwind utilities, and a reproducible production build.',
+  },
+  {
+    title: '03 · Deploy',
+    description: 'Publish the generated static bundle through GitHub Actions and GitHub Pages.',
+  },
+];
 
-const TestimonialsSection: React.FC = () => {
+const TestimonialsSection = () => {
   return (
-    <section className='pt-20 py-20'>
-      <div className='container mx-auto text-center'>
-        <div className='grid grid-cols-2 gap-10'>
-          <div className='bg-gradient-to-b from-transparent to-[#1A1A2E] p-8 rounded-lg text-left'>
-            <img
-              alt='Client feedback'
-              src={`${process.env.PUBLIC_URL}/images/icon-client-feedback1.svg`}
-              style={{ marginBottom: '-2rem', marginLeft: '-3rem' }}
-            />
-            <p className='text-gray-200 text-lg leading-relaxed font-light tracking-tight pt-0 pb-9'>
-              Thanks to DevOptima, our team can focus more on{' '}
-              <span className='font-medium text-gray-100'>innovation</span> and
-              less on operational challenges. Their cloud management solutions
-              are top-notch.
+    <section id='process' className='section-padding'>
+      <div className='container'>
+        <div className='grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start'>
+          <div>
+            <p className='mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent-strong'>
+              Process
             </p>
-            <div className='flex items-center'>
-              <img
-                alt='John Smith'
-                src={`${process.env.PUBLIC_URL}/images/john-smith.png`}
-                className='w-12 h-12 rounded-full grayscale object-cover'
-              />
-              <div className='ml-4 text-left'>
-                <h3 className='text-white text-lg font-medium'>John Smith</h3>
-                <p className='text-gray-400 text-sm'>IT Director at Reflex</p>
-              </div>
-            </div>
+            <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
+              Simple static-site delivery flow
+            </h2>
+            <p className='mt-5 text-lg leading-8 text-slate-300'>
+              The project stays intentionally small: clean UI components, static build output, and
+              automated publishing.
+            </p>
           </div>
-          <div className='bg-gradient-to-b from-transparent to-[#1A1A2E] p-8 rounded-lg text-left'>
-            <img
-              alt='Client feedback'
-              src={`${process.env.PUBLIC_URL}/images/icon-client-feedback2.svg`}
-              style={{ marginBottom: '-2rem', marginLeft: '-3rem' }}
-            />
-            <p className='text-gray-200 text-lg leading-relaxed font-light tracking-tight pt-0 pb-9'>
-              DevOptima has been a game-changer for us. With their support,
-              we've shifted our focus from operational hurdles to pushing
-              boundaries in{' '}
-              <span className='font-medium text-gray-100'>innovation</span>.
-            </p>
-            <div className='flex items-center'>
-              <img
-                alt='Jane Doe'
-                src={`${process.env.PUBLIC_URL}/images/jane-doe.png`}
-                className='w-12 h-12 rounded-full grayscale object-cover'
-              />
-              <div className='ml-4 text-left'>
-                <h3 className='text-white text-lg font-medium'>Jane Doe</h3>
-                <p className='text-gray-400 text-sm'>Tech Lead at Dribble</p>
-              </div>
-            </div>
+
+          <div className='grid gap-4'>
+            {workflowSteps.map((step) => (
+              <article key={step.title} className='rounded-2xl border border-white/10 bg-white/[0.03] p-6'>
+                <h3 className='text-lg font-semibold text-white'>{step.title}</h3>
+                <p className='mt-2 leading-7 text-slate-400'>{step.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </div>
