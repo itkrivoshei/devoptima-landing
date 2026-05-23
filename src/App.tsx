@@ -1,5 +1,3 @@
-import './index.css';
-
 import CallToActionSection from './components/CallToActionSection';
 import FeaturesSection from './components/FeaturesSection';
 import Footer from './components/Footer';
@@ -10,7 +8,7 @@ import TestimonialsSection from './components/TestimonialsSection';
 
 const App = () => {
   return (
-    <div className='min-h-screen overflow-hidden text-slate-50'>
+    <div className='min-h-screen overflow-hidden bg-background text-slate-50'>
       <Header />
       <main>
         <HeroSection />
