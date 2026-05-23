@@ -1,10 +1,12 @@
 # DevOptima Landing Page
 
-Responsive landing page built with React, TypeScript, Tailwind CSS and Vite.
+[![Deploy to GitHub Pages](https://github.com/itkrivoshei/devoptima-landing/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/itkrivoshei/devoptima-landing/actions/workflows/deploy.yml)
 
-## Live Demo
+Responsive landing page built with React, TypeScript, Vite and Tailwind CSS.
 
-https://itkrivoshei.github.io/devoptima-landing/
+- **Live:** https://itkrivoshei.github.io/devoptima-landing/
+- **Workflow:** [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+- **Node.js:** [`22`](.nvmrc)
 
 ## Stack
 
@@ -12,31 +14,70 @@ https://itkrivoshei.github.io/devoptima-landing/
 - TypeScript
 - Vite
 - Tailwind CSS
+- GitHub Actions
 - GitHub Pages
 
-## Features
+## Commands
 
-- Responsive layout
-- Reusable React components
-- Tailwind-based styling
-- Static production build
-- GitHub Pages deployment
+| Command | Description |
+| --- | --- |
+| `npm install` | Install dependencies |
+| `npm run dev` | Start local development server |
+| `npm run typecheck` | Run TypeScript checks |
+| `npm run build` | Create production build in `dist/` |
+| `npm run preview` | Preview production build locally |
 
-## Project Structure
+## CI/CD
 
-```bash
-src/
-├── components/
-├── App.tsx
-├── main.tsx
-└── index.css
+The site is deployed with GitHub Actions.
+
+```text
+push to master
+→ install dependencies
+→ run production build
+→ upload dist artifact
+→ deploy to GitHub Pages
 ```
 
-## Run Locally
+Deployment details:
+
+| Item | Value |
+| --- | --- |
+| Workflow | `.github/workflows/deploy.yml` |
+| Trigger | `push` to `master`, manual `workflow_dispatch` |
+| Runner | `ubuntu-latest` |
+| Node.js | `22` |
+| Build output | `dist/` |
+| Hosting | GitHub Pages |
+| Secrets | Not required |
+
+## Structure
+
+```text
+.
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── public/
+│   └── images/
+├── src/
+│   ├── components/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
+```
+
+## Local Setup
 
 ```bash
 git clone https://github.com/itkrivoshei/devoptima-landing.git
 cd devoptima-landing
+nvm use
 npm install
 npm run dev
 ```
@@ -45,14 +86,5 @@ npm run dev
 
 ```bash
 npm run build
-```
-
-## Preview
-
-```bash
 npm run preview
 ```
-
-## License
-
-MIT
