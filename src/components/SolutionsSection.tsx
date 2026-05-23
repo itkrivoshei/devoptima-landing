@@ -40,7 +40,7 @@ const SolutionsSection = () => {
             >
               <img
                 alt=''
-                src={`${process.env.PUBLIC_URL}/images/${service.icon}`}
+                src={`${import.meta.env.BASE_URL}images/${service.icon}`}
                 className='mb-5 h-14 w-14'
                 aria-hidden='true'
               />
