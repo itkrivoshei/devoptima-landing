@@ -1,83 +1,50 @@
-import React from 'react';
+const features = [
+  {
+    title: 'Pipeline automation',
+    text: 'Build, test and release changes with less manual work.',
+  },
+  {
+    title: 'Infrastructure clarity',
+    text: 'Keep environments easier to understand, repeat and maintain.',
+  },
+  {
+    title: 'Operational visibility',
+    text: 'Surface key metrics before small issues become expensive problems.',
+  },
+  {
+    title: 'Reliable delivery',
+    text: 'Improve release confidence with consistent engineering routines.',
+  },
+];
 
-const FeaturesSection: React.FC = () => {
+const FeaturesSection = () => {
   return (
-    <section className='pt-20 py-20'>
-      <div className='container mx-auto grid grid-cols-2 gap-10 items-center'>
-        <div className='relative'>
+    <section id="services" className="py-20">
+      <div className="container grid items-center gap-12 lg:grid-cols-2">
+        <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-4">
           <img
-            alt='dashboard'
-            src={`${process.env.PUBLIC_URL}/images/dashboard-metrics.svg`}
-            className='relative z-20'
-            style={{ maxWidth: '100%', height: 'auto' }}
+            alt="Dashboard metrics illustration"
+            src={`${import.meta.env.BASE_URL}images/dashboard-metrics.svg`}
+            className="w-full rounded-3xl"
           />
         </div>
-        <div className='max-w-[630px]'>
-          <h2 className='font-title text-[48px] leading-[112.5%] pb-7 text-white tracking-tight'>
-            What is DevOptima?
+
+        <div>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#9DBBFF]">Services</p>
+          <h2 className="max-w-xl text-4xl font-bold tracking-tight text-white md:text-5xl">
+            Practical DevOps work for faster software delivery.
           </h2>
-          <p className='text-gray-400 text-[20px] leading-[30px] font-light tracking-[-0.02em] pt-0 pb-9'>
-            At DevOptima, we are a team of passionate DevOps experts committed
-            to transforming the way businesses approach software development and
-            operations.
+          <p className="mt-5 max-w-xl text-lg leading-8 text-text-secondary">
+            The page presents common DevOps service areas in a simple, readable structure.
           </p>
-          <div className='grid grid-cols-2 gap-8'>
-            <div className='flex flex-col items-start text-left'>
-              <img
-                alt='DevOps transformation'
-                src={`${process.env.PUBLIC_URL}/images/icon-devops-transformation.svg`}
-                style={{ marginBottom: '-1.2rem', marginLeft: '-2rem' }}
-              />
-              <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
-                DevOps transformation
-              </h3>
-              <p className='text-gray-400 text-[16px] leading-[22px] font-light tracking-[-0.02em]'>
-                Reshaping businesses with DevOps expertise.
-              </p>
-            </div>
-            <div className='flex flex-col items-start text-left'>
-              <img
-                alt='Efficient operations'
-                src={`${process.env.PUBLIC_URL}/images/icon-efficient-operations.svg`}
-                style={{ marginBottom: '-1.2rem', marginLeft: '-2rem' }}
-              />
-              <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
-                Efficient operations
-              </h3>
-              <p className='text-gray-400 text-[16px] leading-[22px] font-light tracking-[-0.02em]'>
-                Streamline processes for productivity gains.
-              </p>
-            </div>
-            <div className='flex flex-col items-start text-left'>
-              <img
-                alt='CI/CD implementation'
-                src={`${process.env.PUBLIC_URL}/images/icon-cicd-implementation.svg`}
-                style={{ marginBottom: '-1.2rem', marginLeft: '-2rem' }}
-              />
-              <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
-                CI/CD implementation
-              </h3>
-              <p className='text-gray-400 text-[16px] leading-[22px] font-light tracking-[-0.02em]'>
-                Seamless software delivery pipeline.
-              </p>
-            </div>
-            <div className='flex flex-col items-start text-left'>
-              <img
-                alt='Automation mastery'
-                src={`${process.env.PUBLIC_URL}/images/icon-automation-mastery.svg`}
-                style={{
-                  marginBottom: '-1.2rem',
-                  marginLeft: '-2rem',
-                  padding: '9px',
-                }}
-              />
-              <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
-                Automation mastery
-              </h3>
-              <p className='text-gray-400 text-[16px] leading-[22px] font-light tracking-[-0.02em]'>
-                Unlock full automation potential.
-              </p>
-            </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {features.map((feature) => (
+              <article key={feature.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-text-secondary">{feature.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </div>
