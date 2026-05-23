@@ -1,27 +1,36 @@
-# DevOptima Landing
+# DevOptima Landing Page
 
-Responsive static landing page built with React, TypeScript, and Tailwind CSS.
+Responsive landing page built with React, TypeScript, Tailwind CSS and Vite.
 
 ## Live Demo
 
-[View demo](https://itkrivoshei.github.io/devoptima-landing/)
+https://itkrivoshei.github.io/devoptima-landing/
 
-## Tech Stack
+## Stack
 
 - React
 - TypeScript
+- Vite
 - Tailwind CSS
-- Create React App
-- GitHub Actions
 - GitHub Pages
 
 ## Features
 
-- Responsive landing page layout
+- Responsive layout
 - Reusable React components
-- Static assets served from `public/images`
-- Production build for GitHub Pages
-- Automated deployment workflow
+- Tailwind-based styling
+- Static production build
+- GitHub Pages deployment
+
+## Project Structure
+
+```bash
+src/
+├── components/
+├── App.tsx
+├── main.tsx
+└── index.css
+```
 
 ## Run Locally
 
@@ -29,13 +38,7 @@ Responsive static landing page built with React, TypeScript, and Tailwind CSS.
 git clone https://github.com/itkrivoshei/devoptima-landing.git
 cd devoptima-landing
 npm install
-npm start
-```
-
-The app runs at:
-
-```text
-http://localhost:3000
+npm run dev
 ```
 
 ## Build
@@ -44,22 +47,12 @@ http://localhost:3000
 npm run build
 ```
 
-## Test
+## Preview
 
 ```bash
-npm test -- --watchAll=false
+npm run preview
 ```
-
-## Deployment
-
-The project deploys to GitHub Pages through:
-
-```text
-.github/workflows/deploy.yml
-```
-
-On every push to `master`, GitHub Actions installs dependencies, runs tests, builds the app, and publishes the static build.
 
 ## License
 
-MIT License.
+MIT
