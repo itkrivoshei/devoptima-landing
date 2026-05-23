@@ -62,6 +62,13 @@ Deployment details:
 │   └── images/
 ├── src/
 │   ├── components/
+│   │   ├── CallToActionSection.tsx
+│   │   ├── FeaturesSection.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── ProcessSection.tsx
+│   │   └── SolutionsSection.tsx
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── index.css
