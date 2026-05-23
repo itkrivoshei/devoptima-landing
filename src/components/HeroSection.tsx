@@ -37,7 +37,7 @@ const HeroSection = () => {
           <div className='relative rounded-[2rem] border border-white/10 bg-white/[0.03] p-5 shadow-soft'>
             <img
               alt='Code and deployment dashboard illustration'
-              src={`${process.env.PUBLIC_URL}/images/code-image.svg`}
+              src={`${import.meta.env.BASE_URL}images/code-image.svg`}
               className='h-auto w-full'
             />
           </div>
