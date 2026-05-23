@@ -11,7 +11,7 @@ const Footer = () => {
       <div className='container flex flex-col gap-8 md:flex-row md:items-center md:justify-between'>
         <a href='#home' className='inline-flex items-center' aria-label='DevOptima home'>
           <img
-            src={`${process.env.PUBLIC_URL}/images/logoDevOptima.svg`}
+            src={`${import.meta.env.BASE_URL}images/logoDevOptima.svg`}
             alt='DevOptima logo'
             className='h-9 w-auto'
           />
