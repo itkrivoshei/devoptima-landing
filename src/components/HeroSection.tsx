@@ -1,45 +1,40 @@
-import React from 'react';
-
-const MainSection: React.FC = () => {
+const HeroSection = () => {
   return (
-    <section className='pt-20 py-20'>
-      <div className='container mx-auto flex items-center justify-between pt-20'>
-        <div className='pt-12'>
-          <h2 className='font-title text-7xl leading-tight pb-7 bg-clip-text text-transparent bg-gradient-to-r from-[#6D9CF6] to-white'>
-            Revolutionize <br /> your DevOps journey <br /> with DevOptima
-          </h2>
-          <p className='text-gray-200 text-xl leading-relaxed font-light tracking-tight pt-0 pb-9'>
-            Empower teams to innovate faster through streamlined development,
-            efficient automated workflows, and reliable scaling.
+    <section id="top" className="relative px-0 pb-20 pt-28 md:pb-28 md:pt-36">
+      <div className="container grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="max-w-3xl">
+          <p className="mb-5 inline-flex rounded-full border border-[#3F57DA]/40 bg-white/5 px-4 py-2 text-sm text-[#9DBBFF]">
+            DevOps landing concept
           </p>
-          <div className='flex flex-col h-24'>
-            <div className='rounded-full p-px max-h-14 max-w-lg overflow-hidden border border-[#3A4C91] transition-transform transform hover:scale-105 active:scale-95'>
-              <form
-                className='bg-gradient-to-r from-[#18264A] to-[#0F1631] flex rounded-full items-center justify-between max-h-[54px] overflow-hidden'
-                noValidate
-              >
-                <input
-                  className='outline-none bg-transparent flex-1 text-sm pl-6 py-4 text-white placeholder-gray-500 font-light'
-                  placeholder='Your business email...'
-                  type='email'
-                  name='email'
-                />
-                <div className='overflow-hidden pe-1 rounded-full'>
-                  <button className='flex items-center rounded-full leading-4 text-base font-semibold px-9 h-11 bg-[#243BB9] hover:bg-[#3F57DA] border border-transparent text-white transition-colors duration-200'>
-                    Free trial
-                  </button>
-                </div>
-              </form>
-            </div>
-            <p className='text-red-500 pl-6 pt-3 font-medium leading-5 tracking-tight'></p>
-          </div>
+          <h1 className="text-5xl font-bold tracking-tight text-white md:text-7xl">
+            Ship cleaner systems with better delivery flow.
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-text-secondary">
+            A focused landing page for a DevOps service: clear messaging, responsive layout and a static production build.
+          </p>
+
+          <form className="mt-8 flex max-w-xl flex-col gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-2 sm:flex-row" noValidate>
+            <label htmlFor="email" className="sr-only">
+              Business email
+            </label>
+            <input
+              id="email"
+              className="min-h-12 flex-1 rounded-xl border border-transparent bg-transparent px-4 text-white outline-none placeholder:text-slate-500 focus:border-[#3F57DA]/60"
+              placeholder="Business email"
+              type="email"
+              name="email"
+            />
+            <button className="min-h-12 rounded-xl bg-[#243BB9] px-6 font-semibold text-white transition hover:bg-[#3F57DA]">
+              Request access
+            </button>
+          </form>
         </div>
-        <div className='relative hover:opacity-90 transition-opacity duration-200'>
+
+        <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-4 shadow-2xl shadow-blue-950/30">
           <img
-            alt='hero'
-            src={`${process.env.PUBLIC_URL}/images/code-image.svg`}
-            className='relative z-20'
-            style={{ maxWidth: '100%', height: 'auto' }}
+            alt="Code editor illustration"
+            src={`${import.meta.env.BASE_URL}images/code-image.svg`}
+            className="w-full rounded-3xl"
           />
         </div>
       </div>
@@ -47,4 +42,4 @@ const MainSection: React.FC = () => {
   );
 };
 
-export default MainSection;
+export default HeroSection;
