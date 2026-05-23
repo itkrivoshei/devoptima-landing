@@ -1,24 +1,31 @@
-import React from 'react';
-
-const CallToActionSection: React.FC = () => {
+const CallToActionSection = () => {
   return (
-    <section className='pt-20 py-20 text-center'>
-      <div className='container mx-auto'>
-        <h2 className='font-title text-4xl leading-tight pb-7 text-white'>
-          Ready to elevate your DevOps strategy?
-        </h2>
-        <p className='text-gray-400 text-lg leading-relaxed font-light tracking-tight pt-0 pb-9'>
-          Join the multitude of companies benefiting from optimized DevOps
-          practices. Contact us to discover how DevOptima can help your
-          business.
-        </p>
-        <div className='flex justify-center space-x-4'>
-          <button className='flex items-center rounded-full leading-4 text-base font-semibold px-9 h-12 bg-[#243BB933] border border-[#243BB9] text-white hover:bg-[#243BB980] hover:border-[#3F57DA]'>
-            Contact us
-          </button>
-          <button className='flex items-center rounded-full leading-4 text-base font-semibold px-9 h-12 bg-[#243BB9] hover:bg-[#3F57DA] border border-transparent text-white'>
-            Try for free
-          </button>
+    <section id='contact' className='section-padding'>
+      <div className='container'>
+        <div className='rounded-[2rem] border border-accent/20 bg-gradient-to-br from-accent/20 via-surface to-background p-8 text-center shadow-soft sm:p-12'>
+          <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
+            Build, test, deploy, repeat
+          </h2>
+          <p className='mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300'>
+            The page uses a conventional static deployment flow: React source code, production
+            build, GitHub Actions, and GitHub Pages hosting.
+          </p>
+          <div className='mt-8 flex flex-col justify-center gap-3 sm:flex-row'>
+            <a
+              href='https://github.com/itkrivoshei/devoptima-landing'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong'
+            >
+              View source
+            </a>
+            <a
+              href='#home'
+              className='inline-flex justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10'
+            >
+              Back to top
+            </a>
+          </div>
         </div>
       </div>
     </section>
