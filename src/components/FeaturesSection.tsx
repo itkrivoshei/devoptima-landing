@@ -1,83 +1,63 @@
-import React from 'react';
+const features = [
+  {
+    title: 'DevOps transformation',
+    description: 'Practical improvements for delivery, environments, and release flow.',
+    icon: 'icon-devops-transformation.svg',
+  },
+  {
+    title: 'Efficient operations',
+    description: 'Cleaner workflows for repeatable infrastructure and support tasks.',
+    icon: 'icon-efficient-operations.svg',
+  },
+  {
+    title: 'CI/CD implementation',
+    description: 'Build, test, and deployment pipelines for static and application workloads.',
+    icon: 'icon-cicd-implementation.svg',
+  },
+  {
+    title: 'Automation',
+    description: 'Small automation layers that reduce manual release and maintenance work.',
+    icon: 'icon-automation-mastery.svg',
+  },
+];
 
-const FeaturesSection: React.FC = () => {
+const FeaturesSection = () => {
   return (
-    <section className='pt-20 py-20'>
-      <div className='container mx-auto grid grid-cols-2 gap-10 items-center'>
-        <div className='relative'>
+    <section id='about' className='section-padding'>
+      <div className='container grid items-center gap-12 lg:grid-cols-2'>
+        <div className='rounded-[2rem] border border-white/10 bg-white/[0.03] p-5 shadow-soft'>
           <img
-            alt='dashboard'
+            alt='Metrics dashboard illustration'
             src={`${process.env.PUBLIC_URL}/images/dashboard-metrics.svg`}
-            className='relative z-20'
-            style={{ maxWidth: '100%', height: 'auto' }}
+            className='h-auto w-full'
           />
         </div>
-        <div className='max-w-[630px]'>
-          <h2 className='font-title text-[48px] leading-[112.5%] pb-7 text-white tracking-tight'>
-            What is DevOptima?
-          </h2>
-          <p className='text-gray-400 text-[20px] leading-[30px] font-light tracking-[-0.02em] pt-0 pb-9'>
-            At DevOptima, we are a team of passionate DevOps experts committed
-            to transforming the way businesses approach software development and
-            operations.
+
+        <div>
+          <p className='mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent-strong'>
+            Overview
           </p>
-          <div className='grid grid-cols-2 gap-8'>
-            <div className='flex flex-col items-start text-left'>
-              <img
-                alt='DevOps transformation'
-                src={`${process.env.PUBLIC_URL}/images/icon-devops-transformation.svg`}
-                style={{ marginBottom: '-1.2rem', marginLeft: '-2rem' }}
-              />
-              <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
-                DevOps transformation
-              </h3>
-              <p className='text-gray-400 text-[16px] leading-[22px] font-light tracking-[-0.02em]'>
-                Reshaping businesses with DevOps expertise.
-              </p>
-            </div>
-            <div className='flex flex-col items-start text-left'>
-              <img
-                alt='Efficient operations'
-                src={`${process.env.PUBLIC_URL}/images/icon-efficient-operations.svg`}
-                style={{ marginBottom: '-1.2rem', marginLeft: '-2rem' }}
-              />
-              <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
-                Efficient operations
-              </h3>
-              <p className='text-gray-400 text-[16px] leading-[22px] font-light tracking-[-0.02em]'>
-                Streamline processes for productivity gains.
-              </p>
-            </div>
-            <div className='flex flex-col items-start text-left'>
-              <img
-                alt='CI/CD implementation'
-                src={`${process.env.PUBLIC_URL}/images/icon-cicd-implementation.svg`}
-                style={{ marginBottom: '-1.2rem', marginLeft: '-2rem' }}
-              />
-              <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
-                CI/CD implementation
-              </h3>
-              <p className='text-gray-400 text-[16px] leading-[22px] font-light tracking-[-0.02em]'>
-                Seamless software delivery pipeline.
-              </p>
-            </div>
-            <div className='flex flex-col items-start text-left'>
-              <img
-                alt='Automation mastery'
-                src={`${process.env.PUBLIC_URL}/images/icon-automation-mastery.svg`}
-                style={{
-                  marginBottom: '-1.2rem',
-                  marginLeft: '-2rem',
-                  padding: '9px',
-                }}
-              />
-              <h3 className='text-white text-[20px] font-semibold leading-[25px] tracking-[-0.02em]'>
-                Automation mastery
-              </h3>
-              <p className='text-gray-400 text-[16px] leading-[22px] font-light tracking-[-0.02em]'>
-                Unlock full automation potential.
-              </p>
-            </div>
+          <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
+            Landing page for a DevOps service concept
+          </h2>
+          <p className='mt-5 text-lg leading-8 text-slate-300'>
+            The page presents the core areas of a modern delivery service: automation,
+            deployment, cloud infrastructure, and operating discipline.
+          </p>
+
+          <div className='mt-8 grid gap-4 sm:grid-cols-2'>
+            {features.map((feature) => (
+              <article key={feature.title} className='rounded-2xl border border-white/10 bg-white/[0.03] p-5'>
+                <img
+                  alt=''
+                  src={`${process.env.PUBLIC_URL}/images/${feature.icon}`}
+                  className='mb-3 h-12 w-12'
+                  aria-hidden='true'
+                />
+                <h3 className='font-semibold text-white'>{feature.title}</h3>
+                <p className='mt-2 text-sm leading-6 text-slate-400'>{feature.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </div>
