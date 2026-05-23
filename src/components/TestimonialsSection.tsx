@@ -1,58 +1,46 @@
-import React from 'react';
+const feedback = [
+  {
+    quote: 'The layout keeps the service message direct and easy to scan.',
+    name: 'John Smith',
+    role: 'IT Director',
+    image: 'john-smith.png',
+  },
+  {
+    quote: 'The page is lightweight, responsive and clear enough for a landing task.',
+    name: 'Jane Doe',
+    role: 'Tech Lead',
+    image: 'jane-doe.png',
+  },
+];
 
-const TestimonialsSection: React.FC = () => {
+const TestimonialsSection = () => {
   return (
-    <section className='pt-20 py-20'>
-      <div className='container mx-auto text-center'>
-        <div className='grid grid-cols-2 gap-10'>
-          <div className='bg-gradient-to-b from-transparent to-[#1A1A2E] p-8 rounded-lg text-left'>
-            <img
-              alt='Client feedback'
-              src={`${process.env.PUBLIC_URL}/images/icon-client-feedback1.svg`}
-              style={{ marginBottom: '-2rem', marginLeft: '-3rem' }}
-            />
-            <p className='text-gray-200 text-lg leading-relaxed font-light tracking-tight pt-0 pb-9'>
-              Thanks to DevOptima, our team can focus more on{' '}
-              <span className='font-medium text-gray-100'>innovation</span> and
-              less on operational challenges. Their cloud management solutions
-              are top-notch.
-            </p>
-            <div className='flex items-center'>
-              <img
-                alt='John Smith'
-                src={`${process.env.PUBLIC_URL}/images/john-smith.png`}
-                className='w-12 h-12 rounded-full grayscale object-cover'
-              />
-              <div className='ml-4 text-left'>
-                <h3 className='text-white text-lg font-medium'>John Smith</h3>
-                <p className='text-gray-400 text-sm'>IT Director at Reflex</p>
-              </div>
-            </div>
-          </div>
-          <div className='bg-gradient-to-b from-transparent to-[#1A1A2E] p-8 rounded-lg text-left'>
-            <img
-              alt='Client feedback'
-              src={`${process.env.PUBLIC_URL}/images/icon-client-feedback2.svg`}
-              style={{ marginBottom: '-2rem', marginLeft: '-3rem' }}
-            />
-            <p className='text-gray-200 text-lg leading-relaxed font-light tracking-tight pt-0 pb-9'>
-              DevOptima has been a game-changer for us. With their support,
-              we've shifted our focus from operational hurdles to pushing
-              boundaries in{' '}
-              <span className='font-medium text-gray-100'>innovation</span>.
-            </p>
-            <div className='flex items-center'>
-              <img
-                alt='Jane Doe'
-                src={`${process.env.PUBLIC_URL}/images/jane-doe.png`}
-                className='w-12 h-12 rounded-full grayscale object-cover'
-              />
-              <div className='ml-4 text-left'>
-                <h3 className='text-white text-lg font-medium'>Jane Doe</h3>
-                <p className='text-gray-400 text-sm'>Tech Lead at Dribble</p>
-              </div>
-            </div>
-          </div>
+    <section id="feedback" className="py-20">
+      <div className="container">
+        <div className="mb-10 max-w-2xl">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#9DBBFF]">Feedback</p>
+          <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
+            Clean presentation with reusable cards.
+          </h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {feedback.map((item) => (
+            <figure key={item.name} className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-7">
+              <blockquote className="text-lg leading-8 text-text-secondary">“{item.quote}”</blockquote>
+              <figcaption className="mt-8 flex items-center gap-4">
+                <img
+                  alt={item.name}
+                  src={`${import.meta.env.BASE_URL}images/${item.image}`}
+                  className="h-12 w-12 rounded-full object-cover grayscale"
+                />
+                <div>
+                  <p className="font-semibold text-white">{item.name}</p>
+                  <p className="text-sm text-text-secondary">{item.role}</p>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>
