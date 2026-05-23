@@ -11,7 +11,7 @@ const Header = () => {
         <a href='#home' className='flex items-center gap-3' aria-label='DevOptima home'>
           <img
             alt='DevOptima logo'
-            src={`${process.env.PUBLIC_URL}/images/logoDevOptima.svg`}
+            src={`${import.meta.env.BASE_URL}images/logoDevOptima.svg`}
             className='h-9 w-auto'
           />
         </a>
