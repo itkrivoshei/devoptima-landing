@@ -1,3 +1,7 @@
+import { getAssetPath } from '../utils/assets';
+
+const deploymentStages = ['Build', 'Test', 'Deploy'];
+
 const HeroSection = () => {
   return (
     <section id='home' className='section-padding pt-32'>
@@ -37,9 +41,16 @@ const HeroSection = () => {
           <div className='relative rounded-[2rem] border border-white/10 bg-white/[0.03] p-5 shadow-soft'>
             <img
               alt='Code and deployment dashboard illustration'
-              src={`${import.meta.env.BASE_URL}images/code-image.svg`}
+              src={getAssetPath('images/code-image.svg')}
               className='h-auto w-full'
             />
+            <ol className='mt-4 grid gap-3 text-sm text-slate-300 sm:grid-cols-3' aria-label='Deployment stages'>
+              {deploymentStages.map((stage) => (
+                <li key={stage} className='rounded-2xl border border-accent/20 bg-background/70 px-4 py-3 text-center'>
+                  {stage}
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </div>
