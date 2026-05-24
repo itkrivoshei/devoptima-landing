@@ -1,3 +1,5 @@
+import { getAssetPath } from '../utils/assets';
+
 const features = [
   {
     title: 'DevOps transformation',
@@ -28,7 +30,7 @@ const FeaturesSection = () => {
         <div className='rounded-[2rem] border border-white/10 bg-white/[0.03] p-5 shadow-soft'>
           <img
             alt='Metrics dashboard illustration'
-            src={`${import.meta.env.BASE_URL}images/dashboard-metrics.svg`}
+            src={getAssetPath('images/dashboard-metrics.svg')}
             className='h-auto w-full'
           />
         </div>
@@ -50,7 +52,7 @@ const FeaturesSection = () => {
               <article key={feature.title} className='rounded-2xl border border-white/10 bg-white/[0.03] p-5'>
                 <img
                   alt=''
-                  src={`${import.meta.env.BASE_URL}images/${feature.icon}`}
+                  src={getAssetPath(`images/${feature.icon}`)}
                   className='mb-3 h-12 w-12'
                   aria-hidden='true'
                 />
