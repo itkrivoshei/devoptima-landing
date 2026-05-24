@@ -1,3 +1,5 @@
+import { getAssetPath } from '../utils/assets';
+
 const navigationItems = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
@@ -10,8 +12,9 @@ const Header = () => {
       <nav className='container flex h-16 items-center justify-between' aria-label='Main navigation'>
         <a href='#home' className='flex items-center gap-3' aria-label='DevOptima home'>
           <img
-            alt='DevOptima logo'
-            src={`${import.meta.env.BASE_URL}images/logoDevOptima.svg`}
+            alt=''
+            aria-hidden='true'
+            src={getAssetPath('images/logoDevOptima.svg')}
             className='h-9 w-auto'
           />
         </a>
