@@ -1,3 +1,5 @@
+import { getAssetPath } from '../utils/assets';
+
 const services = [
   {
     title: 'CI/CD pipelines',
@@ -40,7 +42,7 @@ const SolutionsSection = () => {
             >
               <img
                 alt=''
-                src={`${import.meta.env.BASE_URL}images/${service.icon}`}
+                src={getAssetPath(`images/${service.icon}`)}
                 className='mb-5 h-14 w-14'
                 aria-hidden='true'
               />
