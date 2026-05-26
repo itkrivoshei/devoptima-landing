@@ -10,8 +10,6 @@ Responsive DevOps service landing page built with React, TypeScript, Vite, and T
 [![Vite](https://img.shields.io/badge/Vite-7-646cff?style=for-the-badge&logo=vite&logoColor=white)](vite.config.ts)
 [![License](https://img.shields.io/github/license/itkrivoshei/devoptima-landing?style=for-the-badge)](LICENSE)
 
-### [Open Live Site ->](https://itkrivoshei.github.io/devoptima-landing/)
-
 </div>
 
 ## Page System
@@ -57,8 +55,6 @@ The dev server prints the local URL after startup.
 ## Deployment
 
 `.github/workflows/deploy.yml` runs on pushes to `master`, installs Node from `.nvmrc`, runs `npm run verify`, uploads `dist`, and publishes to GitHub Pages.
-
-Live site: https://itkrivoshei.github.io/devoptima-landing/
 
 ## License
 
