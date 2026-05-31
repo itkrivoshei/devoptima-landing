@@ -30,7 +30,7 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --loglevel=error
 
       - name: Verify project
         run: npm run verify
