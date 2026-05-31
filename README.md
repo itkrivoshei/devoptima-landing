@@ -5,7 +5,7 @@
 Responsive DevOps service landing page built with React, TypeScript, Vite, and Tailwind CSS.
 
 [![Live site](https://img.shields.io/badge/live-GitHub%20Pages-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white)](https://itkrivoshei.github.io/devoptima-landing/)
-[![Deploy](https://img.shields.io/github/actions/workflow/status/itkrivoshei/devoptima-landing/deploy.yml?branch=master&style=for-the-badge&label=deploy&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/devoptima-landing/actions/workflows/deploy.yml)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/itkrivoshei/devoptima-landing/deploy.yml?branch=main&style=for-the-badge&label=deploy&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/devoptima-landing/actions/workflows/deploy.yml)
 [![React](https://img.shields.io/badge/React-18-20232a?style=for-the-badge&logo=react&logoColor=61dafb)](package.json)
 [![Vite](https://img.shields.io/badge/Vite-7-646cff?style=for-the-badge&logo=vite&logoColor=white)](vite.config.ts)
 [![License](https://img.shields.io/github/license/itkrivoshei/devoptima-landing?style=for-the-badge)](LICENSE)
@@ -54,7 +54,7 @@ The dev server prints the local URL after startup.
 
 ## Deployment
 
-`.github/workflows/deploy.yml` runs on pushes to `master`, installs Node from `.nvmrc`, runs `npm run verify`, uploads `dist`, and publishes to GitHub Pages.
+`.github/workflows/deploy.yml` runs on pushes to `main`, installs Node from `.nvmrc`, runs `npm run verify`, uploads `dist`, and publishes to GitHub Pages.
 
 ## License
 
